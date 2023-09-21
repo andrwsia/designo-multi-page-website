@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sass --watch scss/main.scss:css/main.css & npm start",
     "start": "browser-sync start --server --files '**/*.html, css/*.css, js/*.js'"
   },
   "author": "Andrew Sia",
