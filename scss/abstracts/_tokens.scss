@@ -2,14 +2,14 @@
 @use "typography" as *;
 @use "sizes" as *;
 
-$prefix: "kpds-";
+$prefix: "designo-";
 
 $active-theme: $light;
 $enable-media-query-dark-mode: false;
 
 // Contextual
-$color-text-default: $color-neutral-700;
-$color-background-default: $color-primary-100;
+$color-text-default: $color-neutral-150;
+$color-background-default: $color-neutral-000;
 $color-text-interactive-default: $color-accent-400;
 $color-text-interactive-hover: $color-accent-500;
 
@@ -72,11 +72,12 @@ $container-max-width-narrow: 40rem;
 $container-max-width-wide: 75rem;
 
 // site header
-$site-header-background-color: $color-primary-300;
-$site-header-color: $color-neutral-900;
+$site-header-background-color: $color-neutral-000;
+$site-header-color: $color-neutral-950;
 $site-header-padding: $size-8 0;
 $site-header-margin: 0;
-$site-header-jusitifcation-small-screens: center;
+$site-header-text-uppercase: uppercase;
+$site-header-jusitifcation-small-screens: space-between;
 $site-header-jusitifcation-large-screens: space-between;
 $site-header-alignment: center;
 
@@ -87,7 +88,11 @@ $navigation-font-size: $font-size-400;
 $navigation-gap: $size-9;
 $navigation-link-text-decoration: none;
 $navigation-font-family: $body-font-family;
-$navigation-font-weight: $body-font-weight;
+$navigation-font-size-100: $font-size-100;
+$navigation-font-size-200: $font-size-200;
+$navigation-font-size-600: $font-size-600;
+$navigation-letter-spacing: $size-xs;
+$navigation-font-weight: $font-weight-default;
 
 // site footer
 $footer-background-color: $color-primary-300;

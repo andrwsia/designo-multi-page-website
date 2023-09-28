@@ -1,18 +1,55 @@
 @use "../abstracts" as *;
 
+// Desktop
 .#{$prefix} {
   &nav {
     --flex-column-gap: #{$navigation-gap};
     list-style: none;
     font-family: $navigation-font-family;
     font-weight: $navigation-font-weight;
+    font-size: $navigation-font-size;
+    letter-spacing: $navigation-letter-spacing;
 
     a {
       color: $navigation-color;
       text-decoration: $navigation-link-text-decoration;
 
       &:is(:hover, :focus) {
-        color: $navigation-color-hover;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Laptop, Mobile
+.#{$prefix} {
+  &mobile-nav {
+    position: absolute;
+    background: black;
+    // --flex-row-gap: #{$navigation-gap};
+    list-style: none;
+    font-family: $navigation-font-family;
+    font-weight: $navigation-font-weight;
+    font-size: $navigation-font-size-600;
+    letter-spacing: $navigation-letter-spacing;
+    width: 100%;
+    height: auto;
+    bottom: -11rem;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: $size-4;
+
+    li {
+      margin: .5rem 0;
+    }
+
+    a {
+      color: white;
+      text-decoration: $navigation-link-text-decoration;
+
+      &:is(:hover, :focus) {
+        text-decoration: underline;
       }
     }
   }

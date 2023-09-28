@@ -2,14 +2,14 @@
 
 .#{$prefix} {
   &flex-group {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: var(--flex-column-gap, $flex-group-gap);
-    row-gap: var(--flex-row-gap, calc($flex-group-gap / 2));
-    width: fit-content;
+    display: flex; // Makes the elements act as a flex container
+    flex-wrap: wrap; // Allows the flex-items to wrap onto multiple lines if there isn't enough space horizontally
+    column-gap: var(--flex-column-gap, $flex-group-gap); // Sets the gap between columns in the flex container
+    row-gap: var(--flex-row-gap, calc($flex-group-gap / 2)); // Sets the gap between columns in the flex container
+    width: fit-content; // Sets the width of the flex-group to fit its content, essentially making the container as wide as necessary
   }
 
   &flex-group.mx-auto {
-    justify-content: center;
+    justify-content: center; // This is another nested selector that targets elements with both the 'flex-group' and 'mx-auto' classes
   }
 }

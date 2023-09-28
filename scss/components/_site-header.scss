@@ -5,12 +5,20 @@
     color: $site-header-color;
     background-color: $site-header-background-color;
     padding: $site-header-padding;
+    text-transform: $site-header-text-uppercase;
+    background: red;
 
     &__inner {
       display: flex;
       gap: $size-4;
       align-items: $site-header-alignment;
       justify-content: $site-header-jusitifcation-small-screens;
+      padding: 0 $size-4;
+
+      img {
+        width: $size-15;
+        object-fit: contain;
+      }
 
       @include mq(medium) {
         justify-content: $site-header-jusitifcation-large-screens;

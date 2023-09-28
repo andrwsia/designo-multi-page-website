@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+.#{$prefix} {
+  &nav-button {
+    background: transparent;
+    // border: .25rem solid var(--button-color, #000);
+    border-radius: 1rem;
+    width: 4rem;
+    --button-color: black; // Setting the button color variable
+    overflow: hidden; // Hides overflowing content
+    
+    &__hamburger {
+      transition: translate 1s, rotate 1s; // Animation transitions for translation and rotation
+    }
+
+    &[aria-expanded="true"] &__hamburger {
+      translate: 3px -3px; // Translates the hamburger icon to create the "X" shape
+      rotate: 0.125turn; // Rotates the hamburger icon to create the "X" shape
+    }
+    
+    &__line {
+      transition: 1s;
+      stroke-dasharray: 60 31 60 300; // Defines stroke dash pattern for the hamburger lines
+    }
+    
+    &[aria-expanded="true"] &__line {
+      stroke-dasharray: 60 105 60 300; // Modifies stroke dash pattern for the "X" lines
+      stroke-dashoffset: -90; // Shifts the dash pattern to create the animation effect
+    }
+  }
+}
