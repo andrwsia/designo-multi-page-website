@@ -1,0 +1,30 @@
+@use "../abstracts/" as *;
+
+// .designo-landing-page__hero {
+//     background-color: red;
+// }
+
+.#{$prefix} {
+    &landing-page {
+        &__hero {
+            .grid-1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        &landing-page {
+            &__hero {
+                background-color: $color-primary-200;
+                
+                .grid-1 {
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+}

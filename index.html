@@ -14,24 +14,24 @@
 
 <body>
     <header class="designo-site-header">
-        <div class="designo-site-header__inner | designo-container designo-position-relative">
-            <img src="./assets/shared/desktop/logo-dark.png" alt="Designo Dark Logo" />
-            <!-- Desktop Navigation -->
-            <nav style="display: none">
-                <ul class="designo-nav | designo-flex-group">
-                    <li>
-                        <a href="#">Our Company</a>
-                    </li>
-                    <li>
-                        <a href="#">Locations</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- Mobile/Tablet Navigation -->
-            <nav class="designo-flex-group">
+        <div class="designo-container">
+            <div class="designo-site-header__inner | designo-position-relative">
+                <img src="./assets/shared/desktop/logo-dark.png" alt="Designo Dark Logo" />
+                <!-- Desktop Navigation -->
+                <nav class="designo-nav">
+                    <ul class="designo-flex-group">
+                        <li>
+                            <a href="#">Our Company</a>
+                        </li>
+                        <li>
+                            <a href="#">Locations</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Button for Mobile/Tablet Navigation -->
                 <button class="designo-nav-button" aria-controls="primary-navigation" aria-expanded="false">
                     <svg stroke="var(--button-color)" fill="none" class="designo-nav-button__hamburger"
                         viewBox="-10 -10 120 120" width="250">
@@ -40,33 +40,39 @@
                         </path>
                     </svg>
                 </button>
-                <ul class="designo-mobile-nav">
-                    <li>
-                        <a href="#">Our Company</a>
-                    </li>
-                    <li>
-                        <a href="#">Locations</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+            </div>
         </div>
     </header>
-    <main id="landing-page">
-        <section class="landing-page_hero" style="background: orange;">
-            <div class="designo-container" style="border: 1px solid blue;">
-                <div class="grid-1">
+    <!-- Mobile/Tablet Navigation -->
+    <nav class="designo-mobile-nav">
+        <div class="designo-container">
+            <ul class="designo-mobile-nav__inner">
+                <li>
+                    <a href="#">Our Company</a>
+                </li>
+                <li>
+                    <a href="#">Locations</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="designo-landing-page">
+        <section class="designo-landing-page__hero" style="border: 1px solid blue;">
+            <div class="designo-container designo-even-columns" style="border: 1px solid orange;">
+                <div class="grid-1 designo-flow" style="border: 1px solid red;">
                     <h1>Award-winning custom designs and digital branding solutions</h1>
                     <p>
                         With over 10 years in the industry, we are experienced in creating
                         fully responsive websites, app design, and engaging brand
                         experiences. Find out more about our services.
                     </p>
-                    <button>Learn more</button>
+                    <button class="designo-button-light">Learn more</button>
                 </div>
-                <div class="grid-2">
+                <div class="grid-2" style="border: 1px solid red;">
                     <img src="./assets/home/desktop/image-hero-phone.png" alt="Phone Image" />
                 </div>
             </div>

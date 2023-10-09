@@ -2,18 +2,17 @@
 
 .#{$prefix} {
   &site-header {
+    z-index: 1000;
+    position: relative;
     color: $site-header-color;
     background-color: $site-header-background-color;
     padding: $site-header-padding;
-    text-transform: $site-header-text-uppercase;
-    background: red;
 
     &__inner {
       display: flex;
       gap: $size-4;
       align-items: $site-header-alignment;
       justify-content: $site-header-jusitifcation-small-screens;
-      padding: 0 $size-4;
 
       img {
         width: $size-15;
@@ -23,6 +22,12 @@
       @include mq(medium) {
         justify-content: $site-header-jusitifcation-large-screens;
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &site-header {
+      padding: $site-header-padding-mobile;
     }
   }
 }

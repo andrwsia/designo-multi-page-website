@@ -2,10 +2,10 @@
 
 .#{$prefix} {
   &container {
-    --padding: #{$container-min-margin-inline} * 2;
-    --max-width: #{$container-max-width};
+    --padding: #{$container-min-margin-inline} * 2;  // 1rem -> 2rem
+    --max-width: #{$container-max-width}; // 64rem
 
-    width: min(100% - var(--padding), var(--max-width));
+    width: min(100% - var(--padding), var(--max-width)); // width: min(100% - 2rem, 64rem)
     margin-inline: auto;
   }
 

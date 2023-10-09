@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .#{$prefix} {
-  &button {
+  &button-light {
     display: inline-flex;
     justify-content: center;
     cursor: pointer;
@@ -11,10 +11,11 @@
     font-size: $button-font-size;
     text-transform: $button-text-transform;
     font-weight: $button-font-weight;
-    padding: $button-padding;
+    padding: 1rem;
     border: $button-border;
     border-radius: $button-border-radius;
     transition: 275ms ease;
+    width: 10rem;
 
     &[data-type="accent"] {
       background-color: $button-accent-background;
